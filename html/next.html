@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hakkında</title>
+</head>
+<body>
+    <h1>Hakkında Sayfası</h1>
+    <strong>Tarih:</strong>
+    <div class="tarih">
+        <strong>Bugünün tarihi:</strong> <span id="tarih"></span>
+    </div>
+    <script>
+      document.getElementById('tarih').textContent = new Date().toLocaleDateString('tr-TR');
+    </script>
+    <a href="index.html">Giriş Sayfasına Dön</a>
+    <a href="https://youtube.com" target="_blank">Video</a>
+    <ul>
+        <div class="ozellikler">
+            <strong>Özellikler:</strong>
+        <div class="1"><li>Özellik 1</li></div>
+        <div class="2"><li>Özellik 2</li></div>
+        <div class="3"><li>Özellik 3</li></div>
+        <div class="4"><li>Özellik 4</li></div>
+        <div class="5"><li>Özellik 5</li></div>
+        <div class="6"><li>Özellik 6</li></div>
+        </div>
+    </ul>
+    <button class="ozellik-btn" style="width: auto; color: blue;" onclick="window.location.href='button1.html'">
+        Özellik 1
+    </button>
+    <button class="ozellik-btn" style="width: auto; color: green;" onclick="window.location.href='button2.html'">
+        Özellik 2 
+    </button>
+    <button class="ozellik-btn" style="width: auto; color: red;" onclick="window.location.href='button3.html'">
+        Özellik 3
+    </button>
+    <button class="ozellik-btn" style="width: auto; color: purple;" onclick="window.location.href='calendar.html'">
+        Özellik 4
+    </button>
+    <button class="ozellik-btn" style="width: auto; color: orange;" onclick="window.location.href='basket.html'">
+        Özellik 5
+    </button>
+    <button class="ozellik-btn" style="width: auto; color: pink;" onclick="window.location.href='music.html'">
+        Özellik 6
+    </button>
+
+    <p>Daha fazla bilgi için <a href="kayit.html">Kayıt Ol</a> sayfasını ziyaret edebilirsiniz.</p>
+    <p>Resim:</p>
+    <div>
+        <img src="mavi.jpg" alt="Mavi Resim" target="_blank" width="300" height="200">
+        <a href="mavi.jpg" target="_blank">Büyüt</a>
+        <a href="https://tr.pinterest.com/pin/321725967153278047" target="_blank">Fotografa ulaş.</a>
+    </div>
+
+</body>
+</html>

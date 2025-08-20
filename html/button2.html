@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #counter {
+            font-size: 24px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button 2</h1>
+    <p>Butona tıkla ve artır</p>
+    <button onclick="counter.innerText = Number(counter.innerText) + 1;">Artır</button>
+    <button onclick="counter.innerText = Number(counter.innerText) - 1;">Azalt</button>
+    <button onclick="counter.innerText = 0;">Sıfırla</button>
+    <span id="counter">0</span>
+
+</body>
+</html>

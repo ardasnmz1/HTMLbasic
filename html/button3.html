@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #counter {
+            font-size: 24px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Button 3</h1>
+    <p>Arka plan rengini değiştir!</p>
+    <button onclick="changeBg()">Rengi Değiştir</button>
+    <script>
+    function changeBg() {
+      document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    }
+    calendar = new Date();
+    document.write("Bugünün tarihi: " + calendar.toLocaleDateString('tr-TR'));
+    document.write("<br>Şu anki saat: " + calendar.toLocaleTimeString('tr-TR'));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button 1</title>
+</head>
+<body>
+
+    <h1>Button 1</h1>
+    <p>Hoşgeldiniz</p>
+
+    <ul>
+        <li>
+            <h2>Bugünün Tarihi:</h2>
+            <p id="tarih"></p>
+            <script>
+                document.getElementById('tarih').textContent = new Date().toLocaleDateString('tr-TR');
+            </script>
+        </li>
+        <li>
+            <h2>Olay:</h2>
+            <a href="https://tr.wikipedia.org/wiki/Vikipedi:Tarihte_bugün" target="_blank" alt="bugün">Olayı Gör</a>
+        </li>
+    </ul>
+    <img src="suprised.jpg" alt="sasirmis" width="300" height="200" style=" top:auto; margin-top: 20px;">
+</body>
+<footer>
+    <p>Bu sayfa <a href="next.html">Hakkında</a> sayfasına yönlendirir.</p>
+    <p>Resim: <a href="suprised.jpg" target="_blank">Büyüt</a></p>
+    <div class="footer-contact"><a href="mailto:ardasiinmez@gmail.com">Bana Ulaş</a></div>
+    <footer-contact>BANA ULAŞABİLİRSİNİZ.</footer-contact>
+
+    
+</footer>
+</html>

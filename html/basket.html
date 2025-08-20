@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sepetim</h1>
+    <p>Sepetinizdeki ürünler:</p>
+    <ul id="urunler"></ul>
+    <p id="toplam">Toplam: $0.00</p>
+    <input type="text" id="urunAdi" placeholder="Ürün adı">
+    <input type="number" id="urunFiyat" placeholder="Fiyat" min="0" step="0.01">
+    <button onclick="ekleUrun()">Ürün Ekle</button>
+    <button onclick="silUrun()">Son Ürünü Sil</button>
+    <button onclick="showPopup()">Ödeme Yap</button>
+    <div id="basket" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:999;">
+      <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px #888; text-align:center; position:relative;">
+        <img src="basket.jpg" alt="Basket" style="max-width:300px; max-height:300px;">
+        <br>
+        <button onclick="closePopup()" style="margin-top:10px;">Kapat</button>
+      </div>
+    </div>
+    <script>
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+    let urunler = [
+      {ad: 'Ürün 1', fiyat: 10},
+      {ad: 'Ürün 2', fiyat: 15},
+      {ad: 'Ürün 3', fiyat: 20}
+    ];
+    function guncelle() {
+      const ul = document.getElementById('urunler');
+      ul.innerHTML = '';
+      let toplam = 0;
+      urunler.forEach(u => {
+        ul.innerHTML += `<li>${u.ad} - $${u.fiyat.toFixed(2)}</li>`;
+        toplam += u.fiyat;
+      });
+      document.getElementById('toplam').textContent = `Toplam: $${toplam.toFixed(2)}`;
+    }
+    function ekleUrun() {
+      const adInput = document.getElementById('urunAdi');
+      const fiyatInput = document.getElementById('urunFiyat');
+      const ad = adInput.value.trim();
+      const fiyat = parseFloat(fiyatInput.value);
+      if(!ad) {
+        alert('Lütfen ürün adını girin!');
+        adInput.focus();
+        return;
+      }
+      if(isNaN(fiyat) || fiyat <= 0) {
+        alert('Lütfen geçerli bir fiyat girin!');
+        fiyatInput.focus();
+        return;
+      }
+      urunler.push({ad, fiyat});
+      guncelle();
+      adInput.value = '';
+      fiyatInput.value = '';
+    }
+    function silUrun() {
+      urunler.pop();
+      guncelle();
+    }
+    guncelle();
+    </script>
+
+    <div class="footer">
+        <div style="width: auto; height: 50px; background: rgb(171, 78, 78); position: relative;">
+            <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">ardasiinmez</p>
+        </div>
+        <a href="index.html">Giriş Sayfasına Dön</a>
+    <a href="next.html">Hakkında Sayfasına Git</a>
+    <a href="https://github.com/ardasnmz1" alt="GitHub Profilim" target="_blank">GitHub</a>
+
+    </div >
+
+
+</body>
+</html>
